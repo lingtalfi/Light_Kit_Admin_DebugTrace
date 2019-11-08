@@ -39,6 +39,13 @@ $events.methods_collection:
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: onKitPageConfReady
+    -
+        method: registerListener
+        args:
+            event: Light_CsrfSimple.on_csrf_token_regenerated
+            listener:
+                instance: @service(kit_admin_debugtrace)
+                callable_method: onCsrfTokenRegenerated
 
 
 

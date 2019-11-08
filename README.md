@@ -104,6 +104,10 @@ $initializer.methods_collection:
 History Log
 =============
 
+- 1.2.0 -- 2019-11-08
+
+    - add csrf_token_regenerated optional property
+    
 - 1.1.1 -- 2019-11-08
 
     - fix too long filenames not handled properly

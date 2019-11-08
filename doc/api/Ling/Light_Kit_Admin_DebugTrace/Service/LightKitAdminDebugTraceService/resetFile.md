@@ -7,7 +7,7 @@ LightKitAdminDebugTraceService::resetFile
 
 
 
-LightKitAdminDebugTraceService::resetFile — Empty the target file (if set), and also prepares a file name (if target dir is set).
+LightKitAdminDebugTraceService::resetFile — Empty the target file (if set) and/or the target dir (if target dir is set).
 
 
 
@@ -21,7 +21,8 @@ protected [LightKitAdminDebugTraceService::resetFile](https://github.com/lingtal
 
 
 
-Empty the target file (if set), and also prepares a file name (if target dir is set).
+Empty the target file (if set) and/or the target dir (if target dir is set).
+Also prepares the name of the file to put in the target dir (if target dir is set).
 
 
 
@@ -49,7 +50,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightKitAdminDebugTraceService::resetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L268-L287)
+See the source code for method [LightKitAdminDebugTraceService::resetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L285-L306)
 
 
 See Also

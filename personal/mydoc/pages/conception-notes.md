@@ -84,8 +84,12 @@ http_request:
     
 
 csrf_token: 
-    new: 2ff3c8a8932850e6daab67a7902bde9f
-    old: 876453f3b934361f64c4e5df7d86aaa9
+    old: 4e6aa03dc040defae32915d8534d0506
+    new: 9d948d9404d4753bbd7cf0d45104160f
+
+csrf_token_regenerated: 
+    old: 9d948d9404d4753bbd7cf0d45104160f
+    new: f352bd39b7d857421095ab826b29bcc9
 
 route: 
     name: lka_route-home
@@ -158,7 +162,6 @@ kit_admin_conf:
             
         
     
-
 
 
 ```

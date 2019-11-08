@@ -106,8 +106,8 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
                  */
                 $csrfSimple = $this->container->get("csrf_simple");
                 $info["csrf_token"] = [
-                    'new' => $csrfSimple->getToken(),
                     'old' => $csrfSimple->getOldToken(),
+                    'new' => $csrfSimple->getToken(),
                 ];
             }
 
@@ -144,6 +144,22 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
         if (true === $this->isAcceptedRequest()) {
             $page = $event->getVar("page");
             $this->appendSection(["kit_admin_page" => $page]);
+        }
+    }
+
+
+    /**
+     * Callable for the Light_CsrfSimple.on_csrf_token_regenerated event provided by @page(the Light_CsrfSimple plugin).
+     *
+     * @param LightEvent $event
+     * @param string $eventName
+     * @throws \Exception
+     */
+    public function onCsrfTokenRegenerated(LightEvent $event, string $eventName)
+    {
+        if (true === $this->isAcceptedRequest()) {
+            $token = $event->getVar("token");
+            $this->appendSection(["csrf_token_regenerated" => $token]);
         }
     }
 
@@ -261,7 +277,8 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
 
 
     /**
-     * Empty the target file (if set), and also prepares a file name (if target dir is set).
+     * Empty the target file (if set) and/or the target dir (if target dir is set).
+     * Also prepares the name of the file to put in the target dir (if target dir is set).
      *
      * @param HttpRequestInterface $request
      */
@@ -272,6 +289,8 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
         }
 
         if (null !== $this->targetDir) {
+
+
             $this->targetDirCurrentFileName =
                 str_replace([
                     '/',
