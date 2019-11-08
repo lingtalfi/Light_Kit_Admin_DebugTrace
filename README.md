@@ -55,10 +55,13 @@ kit_admin_debugtrace:
             container: @container()
         setTargetFile:
             file: /tmp/lka_debugtrace.txt
+        setTargetDir:
+            file: /tmp/lka_debugtrace
         setHttpRequestFilters:
             filters:
-                urlIgnoreIfStartWith:
-                    - /user-data
+                urlIgnoreIfStartWith: []
+#                    - /user-data
+#                    - /ajax-handler
 
 
 # --------------------------------------
@@ -101,6 +104,11 @@ $initializer.methods_collection:
 History Log
 =============
 
+- 1.1.0 -- 2019-11-08
+
+    - add targetDir system
+    - add csrf_token info to the debugtrace
+    
 - 1.0.0 -- 2019-11-07
 
     - initial commit

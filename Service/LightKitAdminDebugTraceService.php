@@ -11,6 +11,7 @@ use Ling\Light\Core\Light;
 use Ling\Light\Events\LightEvent;
 use Ling\Light\Http\HttpRequestInterface;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
+use Ling\Light_CsrfSimple\Service\LightCsrfSimpleService;
 use Ling\Light_Initializer\Initializer\LightInitializerInterface;
 
 /**
@@ -30,6 +31,19 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
      * @var string
      */
     protected $targetFile;
+
+
+    /**
+     * This property holds the targetDir for this instance.
+     * @var string
+     */
+    protected $targetDir;
+
+    /**
+     * This property holds the targetDirCurrentFileName for this instance.
+     * @var string
+     */
+    protected $targetDirCurrentFileName;
 
 
     /**
@@ -55,6 +69,8 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
     {
         $this->container = null;
         $this->targetFile = null;
+        $this->targetDir = null;
+        $this->targetDirCurrentFileName = null;
         $this->httpRequestFilters = [];
         $this->_isAcceptedRequest = true;
     }
@@ -73,7 +89,7 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
         if (true === $this->isAcceptedRequest()) {
 
 
-            $this->resetFile();
+            $this->resetFile($httpRequest);
             $info = [
                 "http_request" => [
                     'url' => $httpRequest->getUri(),
@@ -83,6 +99,18 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
                     '$_COOKIE' => $httpRequest->getCookie(),
                 ],
             ];
+
+            if ($this->container->has('csrf_simple')) {
+                /**
+                 * @var $csrfSimple LightCsrfSimpleService
+                 */
+                $csrfSimple = $this->container->get("csrf_simple");
+                $info["csrf_token"] = [
+                    'new' => $csrfSimple->getToken(),
+                    'old' => $csrfSimple->getOldToken(),
+                ];
+            }
+
             $this->appendSection($info);
         }
     }
@@ -154,8 +182,6 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
     }
 
 
-
-
     //--------------------------------------------
     //
     //--------------------------------------------
@@ -181,6 +207,17 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
     }
 
     /**
+     * Sets the targetDir.
+     *
+     * @param string $targetDir
+     */
+    public function setTargetDir(string $targetDir)
+    {
+        $this->targetDir = $targetDir;
+    }
+
+
+    /**
      * Sets the httpRequestFilters.
      *
      * @param array $httpRequestFilters
@@ -196,7 +233,12 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
     //
     //--------------------------------------------
     /**
-     * Appends a section to the target file.
+     * Appends a section to the target file, if the target file is defined.
+     *
+     * And/or appends a section to a file (which named is based on the http request uri) in the target dir,
+     * if the target dir is defined.
+     *
+     *
      * The section is an array of key/value pairs.
      *
      * @param array $section
@@ -204,16 +246,40 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
     protected function appendSection(array $section)
     {
         $s = BabyYamlUtil::getBabyYamlString($section);
-        FileTool::append($s . PHP_EOL . PHP_EOL, $this->targetFile);
+
+        if (null !== $this->targetFile) {
+            FileTool::append($s . PHP_EOL . PHP_EOL, $this->targetFile);
+        }
+
+        if (null !== $this->targetDir) {
+            $f = $this->targetDir . "/" . $this->targetDirCurrentFileName;
+            FileTool::append($s . PHP_EOL . PHP_EOL, $f);
+        }
+
+
     }
 
 
     /**
-     * Empty the target file.
+     * Empty the target file (if set), and also prepares a file name (if target dir is set).
+     *
+     * @param HttpRequestInterface $request
      */
-    protected function resetFile()
+    protected function resetFile(HttpRequestInterface $request)
     {
-        FileSystemTool::mkfile($this->targetFile, "");
+        if (null !== $this->targetFile) {
+            FileSystemTool::mkfile($this->targetFile, "");
+        }
+
+        if (null !== $this->targetDir) {
+            $this->targetDirCurrentFileName =
+                str_replace([
+                    '/',
+                ], [
+                    '_slash_',
+                ], $request->getUri())
+                . ".txt";
+        }
     }
 
 

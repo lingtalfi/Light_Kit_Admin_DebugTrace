@@ -7,7 +7,7 @@ LightKitAdminDebugTraceService::resetFile
 
 
 
-LightKitAdminDebugTraceService::resetFile — Empty the target file.
+LightKitAdminDebugTraceService::resetFile — Empty the target file (if set), and also prepares a file name (if target dir is set).
 
 
 
@@ -16,12 +16,12 @@ Description
 ================
 
 
-protected [LightKitAdminDebugTraceService::resetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/resetFile.md)() : void
+protected [LightKitAdminDebugTraceService::resetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/resetFile.md)(Ling\Light\Http\HttpRequestInterface $request) : void
 
 
 
 
-Empty the target file.
+Empty the target file (if set), and also prepares a file name (if target dir is set).
 
 
 
@@ -29,7 +29,10 @@ Empty the target file.
 Parameters
 ================
 
-This method has no parameters.
+
+- request
+
+    
 
 
 Return values
@@ -46,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightKitAdminDebugTraceService::resetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L214-L217)
+See the source code for method [LightKitAdminDebugTraceService::resetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L268-L283)
 
 
 See Also

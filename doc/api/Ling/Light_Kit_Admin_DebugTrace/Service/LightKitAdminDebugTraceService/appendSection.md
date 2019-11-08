@@ -7,7 +7,7 @@ LightKitAdminDebugTraceService::appendSection
 
 
 
-LightKitAdminDebugTraceService::appendSection — Appends a section to the target file.
+LightKitAdminDebugTraceService::appendSection — Appends a section to the target file, if the target file is defined.
 
 
 
@@ -21,7 +21,12 @@ protected [LightKitAdminDebugTraceService::appendSection](https://github.com/lin
 
 
 
-Appends a section to the target file.
+Appends a section to the target file, if the target file is defined.
+
+And/or appends a section to a file (which named is based on the http request uri) in the target dir,
+if the target dir is defined.
+
+
 The section is an array of key/value pairs.
 
 
@@ -50,7 +55,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightKitAdminDebugTraceService::appendSection](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L204-L208)
+See the source code for method [LightKitAdminDebugTraceService::appendSection](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L246-L260)
 
 
 See Also

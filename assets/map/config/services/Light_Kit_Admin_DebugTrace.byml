@@ -5,10 +5,13 @@ kit_admin_debugtrace:
             container: @container()
         setTargetFile:
             file: /tmp/lka_debugtrace.txt
+        setTargetDir:
+            file: /tmp/lka_debugtrace
         setHttpRequestFilters:
             filters:
-                urlIgnoreIfStartWith:
-                    - /user-data
+                urlIgnoreIfStartWith: []
+#                    - /user-data
+#                    - /ajax-handler
 
 
 # --------------------------------------

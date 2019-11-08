@@ -4,7 +4,7 @@
 
 The LightKitAdminDebugTraceService class
 ================
-2019-11-07 --> 2019-11-07
+2019-11-07 --> 2019-11-08
 
 
 
@@ -27,6 +27,8 @@ class <span class="pl-k">LightKitAdminDebugTraceService</span> implements [Light
 - Properties
     - protected [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) [$container](#property-container) ;
     - protected string [$targetFile](#property-targetFile) ;
+    - protected string [$targetDir](#property-targetDir) ;
+    - protected string [$targetDirCurrentFileName](#property-targetDirCurrentFileName) ;
     - protected array [$httpRequestFilters](#property-httpRequestFilters) ;
     - private bool [$_isAcceptedRequest](#property-_isAcceptedRequest) ;
 
@@ -38,9 +40,10 @@ class <span class="pl-k">LightKitAdminDebugTraceService</span> implements [Light
     - public [onKitPageConfReady](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/onKitPageConfReady.md)(Ling\Light\Events\LightEvent $event, string $eventName) : void
     - public [setContainer](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setContainer.md)([Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : void
     - public [setTargetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setTargetFile.md)(string $targetFile) : void
+    - public [setTargetDir](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setTargetDir.md)(string $targetDir) : void
     - public [setHttpRequestFilters](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setHttpRequestFilters.md)(array $httpRequestFilters) : void
     - protected [appendSection](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/appendSection.md)(array $section) : void
-    - protected [resetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/resetFile.md)() : void
+    - protected [resetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/resetFile.md)(Ling\Light\Http\HttpRequestInterface $request) : void
     - protected [testRequest](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/testRequest.md)(Ling\Light\Http\HttpRequestInterface $httpRequest) : bool
     - protected [isAcceptedRequest](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/isAcceptedRequest.md)() : bool
 
@@ -61,6 +64,18 @@ Properties
 - <span id="property-targetFile"><b>targetFile</b></span>
 
     This property holds the targetFile for this instance.
+    
+    
+
+- <span id="property-targetDir"><b>targetDir</b></span>
+
+    This property holds the targetDir for this instance.
+    
+    
+
+- <span id="property-targetDirCurrentFileName"><b>targetDirCurrentFileName</b></span>
+
+    This property holds the targetDirCurrentFileName for this instance.
     
     
 
@@ -90,9 +105,10 @@ Methods
 - [LightKitAdminDebugTraceService::onKitPageConfReady](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/onKitPageConfReady.md) &ndash; Callable for the Light_Kit.on_page_conf_ready event provided by [the Light_Kit plugin](https://github.com/lingtalfi/Light_Kit).
 - [LightKitAdminDebugTraceService::setContainer](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setContainer.md) &ndash; Sets the container.
 - [LightKitAdminDebugTraceService::setTargetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setTargetFile.md) &ndash; Sets the targetFile.
+- [LightKitAdminDebugTraceService::setTargetDir](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setTargetDir.md) &ndash; Sets the targetDir.
 - [LightKitAdminDebugTraceService::setHttpRequestFilters](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setHttpRequestFilters.md) &ndash; Sets the httpRequestFilters.
-- [LightKitAdminDebugTraceService::appendSection](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/appendSection.md) &ndash; Appends a section to the target file.
-- [LightKitAdminDebugTraceService::resetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/resetFile.md) &ndash; Empty the target file.
+- [LightKitAdminDebugTraceService::appendSection](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/appendSection.md) &ndash; Appends a section to the target file, if the target file is defined.
+- [LightKitAdminDebugTraceService::resetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/resetFile.md) &ndash; Empty the target file (if set), and also prepares a file name (if target dir is set).
 - [LightKitAdminDebugTraceService::testRequest](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/testRequest.md) &ndash; defined for this instance.
 - [LightKitAdminDebugTraceService::isAcceptedRequest](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/isAcceptedRequest.md) &ndash; Returns whether the current http request has been accepted.
 

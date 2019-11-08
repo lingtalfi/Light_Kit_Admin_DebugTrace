@@ -3,6 +3,7 @@ dependencies:
         - BabyYaml
         - Bat
         - Light
+        - Light_CsrfSimple
         - Light_Initializer
     
 
