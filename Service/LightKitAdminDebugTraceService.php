@@ -279,6 +279,10 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
                     '_slash_',
                 ], $request->getUri())
                 . ".txt";
+
+            if (strlen($this->targetDirCurrentFileName) > 255) {
+                $this->targetDirCurrentFileName = substr($this->targetDirCurrentFileName, 0, 255);
+            }
         }
     }
 

@@ -104,6 +104,10 @@ $initializer.methods_collection:
 History Log
 =============
 
+- 1.1.1 -- 2019-11-08
+
+    - fix too long filenames not handled properly
+    
 - 1.1.0 -- 2019-11-08
 
     - add targetDir system
