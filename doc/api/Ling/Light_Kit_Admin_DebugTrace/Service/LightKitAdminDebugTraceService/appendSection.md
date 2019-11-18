@@ -55,7 +55,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightKitAdminDebugTraceService::appendSection](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L262-L276)
+See the source code for method [LightKitAdminDebugTraceService::appendSection](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L263-L277)
 
 
 See Also

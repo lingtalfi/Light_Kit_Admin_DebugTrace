@@ -10,8 +10,8 @@ kit_admin_debugtrace:
         setHttpRequestFilters:
             filters:
                 urlIgnoreIfStartWith: []
-#                    - /user-data
-#                    - /ajax-handler
+                    - /user-data
+                    - /ajax-handler
 
 
 # --------------------------------------

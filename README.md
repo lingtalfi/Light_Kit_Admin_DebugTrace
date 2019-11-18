@@ -104,6 +104,10 @@ $initializer.methods_collection:
 History Log
 =============
 
+- 1.3.0 -- 2019-11-18
+
+    - add datetime property
+    
 - 1.2.0 -- 2019-11-08
 
     - add csrf_token_regenerated optional property

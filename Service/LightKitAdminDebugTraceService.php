@@ -91,6 +91,7 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
 
             $this->resetFile($httpRequest);
             $info = [
+                "datetime" => date("Y-m-d H:i:s"),
                 "http_request" => [
                     'url' => $httpRequest->getUri(),
                     '$_GET' => $httpRequest->getGet(),
