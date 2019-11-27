@@ -104,6 +104,10 @@ $initializer.methods_collection:
 History Log
 =============
 
+- 1.4.0 -- 2019-11-27
+
+    - use of csrf_session service replaces csrf_simple
+    
 - 1.3.0 -- 2019-11-18
 
     - add datetime property

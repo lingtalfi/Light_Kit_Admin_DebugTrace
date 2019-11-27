@@ -11,6 +11,7 @@ use Ling\Light\Core\Light;
 use Ling\Light\Events\LightEvent;
 use Ling\Light\Http\HttpRequestInterface;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
+use Ling\Light_CsrfSession\Service\LightCsrfSessionService;
 use Ling\Light_CsrfSimple\Service\LightCsrfSimpleService;
 use Ling\Light_Initializer\Initializer\LightInitializerInterface;
 
@@ -101,7 +102,14 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
                 ],
             ];
 
-            if ($this->container->has('csrf_simple')) {
+            if ($this->container->has('csrf_session')) {
+                /**
+                 * @var $csrfService LightCsrfSessionService
+                 */
+                $csrfService = $this->container->get("csrf_session");
+                $info["csrf_token"] = $csrfService->getToken();
+
+            } elseif ($this->container->has('csrf_simple')) {
                 /**
                  * @var $csrfSimple LightCsrfSimpleService
                  */

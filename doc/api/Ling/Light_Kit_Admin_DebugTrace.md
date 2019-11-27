@@ -1,6 +1,6 @@
 Ling/Light_Kit_Admin_DebugTrace
 ================
-2019-11-07 --> 2019-11-18
+2019-11-07 --> 2019-11-27
 
 
 
@@ -26,6 +26,7 @@ Dependencies
 - [BabyYaml](https://github.com/lingtalfi/BabyYaml)
 - [Bat](https://github.com/lingtalfi/Bat)
 - [Light](https://github.com/lingtalfi/Light)
+- [Light_CsrfSession](https://github.com/lingtalfi/Light_CsrfSession)
 - [Light_CsrfSimple](https://github.com/lingtalfi/Light_CsrfSimple)
 - [Light_Initializer](https://github.com/lingtalfi/Light_Initializer)
 
