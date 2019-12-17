@@ -12,6 +12,7 @@ kit_admin_debugtrace:
                 urlIgnoreIfStartWith: []
                     - /user-data
                     - /ajax-handler
+                    - /css/tmp/
 
 
 # --------------------------------------
@@ -46,11 +47,11 @@ $events.methods_collection:
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: onCsrfTokenRegenerated
-
-
-
-$initializer.methods_collection:
     -
-        method: registerInitializer
+        method: registerListener
         args:
-            initializer: @service(kit_admin_debugtrace)
+            event: Light.initialize_1
+            listener:
+                instance: @service(kit_admin_debugtrace)
+                callable_method: initialize
+

@@ -60,8 +60,9 @@ kit_admin_debugtrace:
         setHttpRequestFilters:
             filters:
                 urlIgnoreIfStartWith: []
-#                    - /user-data
-#                    - /ajax-handler
+                    - /user-data
+                    - /ajax-handler
+                    - /css/tmp/
 
 
 # --------------------------------------
@@ -89,14 +90,22 @@ $events.methods_collection:
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: onKitPageConfReady
-
-
-
-$initializer.methods_collection:
     -
-        method: registerInitializer
+        method: registerListener
         args:
-            initializer: @service(kit_admin_debugtrace)
+            event: Light_CsrfSimple.on_csrf_token_regenerated
+            listener:
+                instance: @service(kit_admin_debugtrace)
+                callable_method: onCsrfTokenRegenerated
+    -
+        method: registerListener
+        args:
+            event: Light.initialize_1
+            listener:
+                instance: @service(kit_admin_debugtrace)
+                callable_method: initialize
+
+
 ```
 
 
@@ -104,6 +113,10 @@ $initializer.methods_collection:
 History Log
 =============
 
+- 1.5.0 -- 2019-12-17
+
+    - update plugin to accommodate Light 0.50 new initialization system
+    
 - 1.4.0 -- 2019-11-27
 
     - use of csrf_session service replaces csrf_simple

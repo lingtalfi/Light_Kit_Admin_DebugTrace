@@ -7,18 +7,16 @@ namespace Ling\Light_Kit_Admin_DebugTrace\Service;
 use Ling\BabyYaml\BabyYamlUtil;
 use Ling\Bat\FileSystemTool;
 use Ling\Bat\FileTool;
-use Ling\Light\Core\Light;
 use Ling\Light\Events\LightEvent;
 use Ling\Light\Http\HttpRequestInterface;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_CsrfSession\Service\LightCsrfSessionService;
 use Ling\Light_CsrfSimple\Service\LightCsrfSimpleService;
-use Ling\Light_Initializer\Initializer\LightInitializerInterface;
 
 /**
  * The LightKitAdminDebugTraceService class.
  */
-class LightKitAdminDebugTraceService implements LightInitializerInterface
+class LightKitAdminDebugTraceService
 {
 
     /**
@@ -80,10 +78,18 @@ class LightKitAdminDebugTraceService implements LightInitializerInterface
     //
     //--------------------------------------------
     /**
-     * @implementation
+     * Listener for the @page(Light.initialize_1 event).
+     * It will write information about the http request and the csrf token into the debug trace file.
+     *
+     *
+     * @param LightEvent $event
+     * @return void
+     * @throws \Exception
      */
-    public function initialize(Light $light, HttpRequestInterface $httpRequest)
+    public function initialize(LightEvent $event)
     {
+
+        $httpRequest = $event->getHttpRequest();
 
         $this->testRequest($httpRequest);
 
