@@ -54,4 +54,11 @@ $events.methods_collection:
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: initialize
+    -
+        method: registerListener
+        args:
+            event: Light.end_routine
+            listener:
+                instance: @service(kit_admin_debugtrace)
+                callable_method: onEndRoutine
 

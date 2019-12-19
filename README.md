@@ -1,6 +1,6 @@
 Light_Kit_Admin_DebugTrace
 ===========
-2019-11-07
+2019-11-07 -> 2019-12-19
 
 
 
@@ -104,6 +104,14 @@ $events.methods_collection:
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: initialize
+    -
+        method: registerListener
+        args:
+            event: Light.end_routine
+            listener:
+                instance: @service(kit_admin_debugtrace)
+                callable_method: onEndRoutine
+
 
 
 ```
@@ -113,6 +121,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.0 -- 2019-12-19
+
+    - add events and session information to the debug file
+    
 - 1.5.0 -- 2019-12-17
 
     - update plugin to accommodate Light 0.50 new initialization system

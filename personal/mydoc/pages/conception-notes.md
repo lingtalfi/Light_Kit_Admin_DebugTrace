@@ -15,6 +15,9 @@ This debug tool gives access to basic information:
 - the kit page being used
 - the templates being used
 - the csrf token values (if you use the [csrf_simple](/komin/jin_site_demo/universe/Ling/Light_CsrfSimple) service)
+- events being used (i.e. events with some listeners attached to it)
+- session variables
+
 
 
 
@@ -83,13 +86,7 @@ http_request:
         PHPSESSID: u0hrb5ijemvthhbdgma1dltoba
     
 
-csrf_token: 
-    old: 4e6aa03dc040defae32915d8534d0506
-    new: 9d948d9404d4753bbd7cf0d45104160f
-
-csrf_token_regenerated: 
-    old: 9d948d9404d4753bbd7cf0d45104160f
-    new: f352bd39b7d857421095ab826b29bcc9
+csrf_token: 4d05d942124feb8d96f7e2c20e5b97bf
 
 route: 
     name: lka_route-home
@@ -162,7 +159,15 @@ kit_admin_conf:
             
         
     
+events: 
+    - Light.initialize_1
+    - Light.initialize_2
+    - Light.on_route_found
+    - Light.end_routine
 
+session: 
+    light_csrf_session: 4d05d942124feb8d96f7e2c20e5b97bf
+    WebsiteUserManager: undefined
 
 ```
 

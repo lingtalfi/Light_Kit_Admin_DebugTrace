@@ -5,6 +5,7 @@ dependencies:
         - Light
         - Light_CsrfSession
         - Light_CsrfSimple
+        - Light_Events
     
 
 post_install: 

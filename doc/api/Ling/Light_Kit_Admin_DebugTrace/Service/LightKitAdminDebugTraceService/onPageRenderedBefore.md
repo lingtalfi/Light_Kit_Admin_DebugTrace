@@ -58,7 +58,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightKitAdminDebugTraceService::onPageRenderedBefore](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L157-L163)
+See the source code for method [LightKitAdminDebugTraceService::onPageRenderedBefore](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L158-L164)
 
 
 See Also

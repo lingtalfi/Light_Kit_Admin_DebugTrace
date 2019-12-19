@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightKitAdminDebugTraceService::setTargetDir](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L245-L248)
+See the source code for method [LightKitAdminDebugTraceService::setTargetDir](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L266-L269)
 
 
 See Also

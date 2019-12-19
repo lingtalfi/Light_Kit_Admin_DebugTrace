@@ -12,6 +12,7 @@ use Ling\Light\Http\HttpRequestInterface;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_CsrfSession\Service\LightCsrfSessionService;
 use Ling\Light_CsrfSimple\Service\LightCsrfSimpleService;
+use Ling\Light_Events\Service\LightEventsService;
 
 /**
  * The LightKitAdminDebugTraceService class.
@@ -212,6 +213,26 @@ class LightKitAdminDebugTraceService
         }
     }
 
+
+    /**
+     * Callable for @page(the Light.end_routine event).
+     * @param LightEvent $event
+     * @throws \Exception
+     */
+    public function onEndRoutine(LightEvent $event)
+    {
+
+        /**
+         * @var $events LightEventsService
+         */
+        $events = $this->container->get("events");
+        $this->appendSection([
+            "events" => $events->getDispatchedEvents(),
+            "session" => $_SESSION,
+        ]);
+
+
+    }
 
     //--------------------------------------------
     //

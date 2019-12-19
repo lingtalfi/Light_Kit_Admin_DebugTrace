@@ -4,7 +4,7 @@
 
 The LightKitAdminDebugTraceService class
 ================
-2019-11-07 --> 2019-12-17
+2019-11-07 --> 2019-12-19
 
 
 
@@ -39,6 +39,7 @@ class <span class="pl-k">LightKitAdminDebugTraceService</span>  {
     - public [onPageRenderedBefore](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/onPageRenderedBefore.md)(Ling\Light\Events\LightEvent $event, string $eventName) : void
     - public [onCsrfTokenRegenerated](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/onCsrfTokenRegenerated.md)(Ling\Light\Events\LightEvent $event, string $eventName) : void
     - public [onKitPageConfReady](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/onKitPageConfReady.md)(Ling\Light\Events\LightEvent $event, string $eventName) : void
+    - public [onEndRoutine](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/onEndRoutine.md)(Ling\Light\Events\LightEvent $event) : void
     - public [setContainer](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setContainer.md)([Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : void
     - public [setTargetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setTargetFile.md)(string $targetFile) : void
     - public [setTargetDir](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setTargetDir.md)(string $targetDir) : void
@@ -105,6 +106,7 @@ Methods
 - [LightKitAdminDebugTraceService::onPageRenderedBefore](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/onPageRenderedBefore.md) &ndash; Callable for the Light_Kit_Admin.on_page_rendered_before event provided by [the Light_Kit_Admin plugin](https://github.com/lingtalfi/Light_Kit_Admin).
 - [LightKitAdminDebugTraceService::onCsrfTokenRegenerated](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/onCsrfTokenRegenerated.md) &ndash; Callable for the Light_CsrfSimple.on_csrf_token_regenerated event provided by [the Light_CsrfSimple plugin](Light_CsrfSimple).
 - [LightKitAdminDebugTraceService::onKitPageConfReady](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/onKitPageConfReady.md) &ndash; Callable for the Light_Kit.on_page_conf_ready event provided by [the Light_Kit plugin](https://github.com/lingtalfi/Light_Kit).
+- [LightKitAdminDebugTraceService::onEndRoutine](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/onEndRoutine.md) &ndash; Callable for [the Light.end_routine event](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md).
 - [LightKitAdminDebugTraceService::setContainer](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setContainer.md) &ndash; Sets the container.
 - [LightKitAdminDebugTraceService::setTargetFile](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setTargetFile.md) &ndash; Sets the targetFile.
 - [LightKitAdminDebugTraceService::setTargetDir](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/setTargetDir.md) &ndash; Sets the targetDir.

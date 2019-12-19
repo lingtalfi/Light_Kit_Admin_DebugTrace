@@ -58,7 +58,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightKitAdminDebugTraceService::onRouteFound](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L141-L147)
+See the source code for method [LightKitAdminDebugTraceService::onRouteFound](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/Service/LightKitAdminDebugTraceService.php#L142-L148)
 
 
 See Also
