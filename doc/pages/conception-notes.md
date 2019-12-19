@@ -65,6 +65,20 @@ The http request filters let you do that in the form of an array with the follow
 - ?urlIgnoreIfStartWith: array|string. If the uri starts with one of the items defined by this property, it will be filtered out.  
 
 
+Security warning
+-------------
+
+We recommend that you never use this plugin in production, only in a development environment.
+Why, because this will log information to a file, and that information is potentially critical.
+
+In particular, the following bits:
+
+- http_request.$_POST: may contain the password in clear of an user which logs in
+- csrf_token: may contain the session token, which if discovered by a malicious attacker makes all kind of csrf attacks very likely
+
+
+
+
 
 Example of output
 -----------

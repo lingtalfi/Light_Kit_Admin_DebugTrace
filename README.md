@@ -121,6 +121,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.1 -- 2019-12-19
+
+    - add security section in the conception notes
+    
 - 1.6.0 -- 2019-12-19
 
     - add events and session information to the debug file
