@@ -121,6 +121,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.3 -- 2019-12-20
+
+    - fix LightKitAdminDebugTraceService->onEndRoutine erroneously handling refuted requests
+    
 - 1.6.2 -- 2019-12-20
 
     - fix LightKitAdminDebugTraceService->onEndRoutine not displaying objects in session properly

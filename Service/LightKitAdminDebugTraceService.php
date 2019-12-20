@@ -222,26 +222,27 @@ class LightKitAdminDebugTraceService
      */
     public function onEndRoutine(LightEvent $event)
     {
+        if (true === $this->isAcceptedRequest()) {
 
-        $session  = $_SESSION;
-        array_walk_recursive($session, function (&$v) {
-            if (is_object($v)) {
-                $v = ArrayTool::objectToArray($v);
-            }
-            return $v;
-        });
-
-
-        /**
-         * @var $events LightEventsService
-         */
-        $events = $this->container->get("events");
-        $this->appendSection([
-            "events" => $events->getDispatchedEvents(),
-            "session" => $session,
-        ]);
+            $session = $_SESSION;
+            array_walk_recursive($session, function (&$v) {
+                if (is_object($v)) {
+                    $v = ArrayTool::objectToArray($v);
+                }
+                return $v;
+            });
 
 
+            /**
+             * @var $events LightEventsService
+             */
+            $events = $this->container->get("events");
+            $this->appendSection([
+                "events" => $events->getDispatchedEvents(),
+                "session" => $session,
+            ]);
+
+        }
     }
 
     //--------------------------------------------
