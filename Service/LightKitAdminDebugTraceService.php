@@ -5,6 +5,7 @@ namespace Ling\Light_Kit_Admin_DebugTrace\Service;
 
 
 use Ling\BabyYaml\BabyYamlUtil;
+use Ling\Bat\ArrayTool;
 use Ling\Bat\FileSystemTool;
 use Ling\Bat\FileTool;
 use Ling\Light\Events\LightEvent;
@@ -222,13 +223,22 @@ class LightKitAdminDebugTraceService
     public function onEndRoutine(LightEvent $event)
     {
 
+        $session  = $_SESSION;
+        array_walk_recursive($session, function (&$v) {
+            if (is_object($v)) {
+                $v = ArrayTool::objectToArray($v);
+            }
+            return $v;
+        });
+
+
         /**
          * @var $events LightEventsService
          */
         $events = $this->container->get("events");
         $this->appendSection([
             "events" => $events->getDispatchedEvents(),
-            "session" => $_SESSION,
+            "session" => $session,
         ]);
 
 
@@ -297,6 +307,7 @@ class LightKitAdminDebugTraceService
      */
     protected function appendSection(array $section)
     {
+
         $s = BabyYamlUtil::getBabyYamlString($section);
 
         if (null !== $this->targetFile) {

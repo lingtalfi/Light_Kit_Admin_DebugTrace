@@ -1,6 +1,6 @@
 Light_Kit_Admin_DebugTrace
 ===========
-2019-11-07 -> 2019-12-19
+2019-11-07 -> 2019-12-20
 
 
 
@@ -121,6 +121,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.2 -- 2019-12-20
+
+    - fix LightKitAdminDebugTraceService->onEndRoutine not displaying objects in session properly
+    
 - 1.6.1 -- 2019-12-19
 
     - add security section in the conception notes
