@@ -121,6 +121,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.5 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.6.4 -- 2020-06-25
 
     - update conception notes
