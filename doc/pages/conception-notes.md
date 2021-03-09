@@ -124,61 +124,61 @@ route:
 kit_admin_page: Light_Kit_Admin/kit/zeroadmin/zeroadmin_home
 
 kit_admin_conf: 
-    layout: templates/Light_Kit_Admin/layouts/zeroadmin/zeroadmin_main_layout.php
+    layout: templates/Ling.Light_Kit_Admin/layouts/zeroadmin/zeroadmin_main_layout.php
     zones: 
         SUB_zeroadmin_header: 
             - 
                 name: zeroadmin_header_icon_link_new_messages
                 className: Ling\Light_Kit_BootstrapWidgetLibrary\Widget\Picasso\ZeroAdminHeaderNewMessagesIconLinkWidget (picasso)
-                widgetFile: templates/Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminHeaderNewMessagesIconLinkWidget/default.php
+                widgetFile: templates/Ling.Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminHeaderNewMessagesIconLinkWidget/default.php
             
             - 
                 name: zeroadmin_header_icon_link_new_notifications
                 className: Ling\Light_Kit_BootstrapWidgetLibrary\Widget\Picasso\ZeroAdminHeaderNewNotificationsIconLinkWidget (picasso)
-                widgetFile: templates/Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminHeaderNewNotificationsIconLinkWidget/default.php
+                widgetFile: templates/Ling.Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminHeaderNewNotificationsIconLinkWidget/default.php
             
             - 
                 name: zeroadmin_header_icon_link_profile_dropdown
                 className: Ling\Light_Kit_BootstrapWidgetLibrary\Widget\Picasso\ZeroAdminHeaderProfileDropdownLinkWidget (picasso)
-                widgetFile: templates/Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminHeaderProfileDropdownLinkWidget/default.php
+                widgetFile: templates/Ling.Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminHeaderProfileDropdownLinkWidget/default.php
             
         
         header: 
             - 
                 name: zeroadmin_header
                 className: Ling\Light_Kit_BootstrapWidgetLibrary\Widget\Picasso\ZeroAdminHeaderWidget (picasso)
-                widgetFile: templates/Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminHeaderWidget/default.php
+                widgetFile: templates/Ling.Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminHeaderWidget/default.php
             
         
         sidebar: 
             - 
                 name: zeroadmin_sidebar
                 className: Ling\Light_Kit_BootstrapWidgetLibrary\Widget\Picasso\ZeroAdminSidebarWidget (picasso)
-                widgetFile: templates/Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminSidebarWidget/default.php
+                widgetFile: templates/Ling.Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminSidebarWidget/default.php
             
         
         body: 
             - 
                 name: zeroadmin_breadcrumb
                 className: Ling\Light_Kit_BootstrapWidgetLibrary\Widget\Picasso\ZeroAdminBreadcrumbWidget (picasso)
-                widgetFile: templates/Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminBreadcrumbWidget/default.php
+                widgetFile: templates/Ling.Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminBreadcrumbWidget/default.php
             
             - 
                 name: zeroadmin_statsummaryicon
                 className: Ling\Light_Kit_BootstrapWidgetLibrary\Widget\Picasso\ZeroAdminStatSummaryIconWidget (picasso)
-                widgetFile: templates/Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminStatSummaryIconWidget/default.php
+                widgetFile: templates/Ling.Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminStatSummaryIconWidget/default.php
             
             - 
                 name: zeroadmin_herograph
                 className: Ling\Light_Kit_BootstrapWidgetLibrary\Widget\Picasso\ZeroAdminHeroGraphWidget (picasso)
-                widgetFile: templates/Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminHeroGraphWidget/default.php
+                widgetFile: templates/Ling.Light_Kit_BootstrapWidgetLibrary/widgets/picasso/ZeroAdminHeroGraphWidget/default.php
             
         
         footer: 
             - 
                 name: footer_with_button
                 className: Ling\Light_Kit_BootstrapWidgetLibrary\Widget\Picasso\FooterWithButtonWidget (picasso)
-                widgetFile: templates/Light_Kit_BootstrapWidgetLibrary/widgets/picasso/FooterWithButtonWidget/default.php
+                widgetFile: templates/Ling.Light_Kit_BootstrapWidgetLibrary/widgets/picasso/FooterWithButtonWidget/default.php
             
         
     
