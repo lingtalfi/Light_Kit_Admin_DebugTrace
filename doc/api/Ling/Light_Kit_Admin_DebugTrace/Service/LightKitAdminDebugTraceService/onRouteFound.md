@@ -7,7 +7,7 @@ LightKitAdminDebugTraceService::onRouteFound
 
 
 
-LightKitAdminDebugTraceService::onRouteFound — Callable for the Light.on_route_found event provided by [the Light framework](https://github.com/lingtalfi/Light).
+LightKitAdminDebugTraceService::onRouteFound — Callable for the Ling.Light.on_route_found event provided by [the Light framework](https://github.com/lingtalfi/Light).
 
 
 
@@ -21,7 +21,7 @@ public [LightKitAdminDebugTraceService::onRouteFound](https://github.com/lingtal
 
 
 
-Callable for the Light.on_route_found event provided by [the Light framework](https://github.com/lingtalfi/Light).
+Callable for the Ling.Light.on_route_found event provided by [the Light framework](https://github.com/lingtalfi/Light).
 
 
 

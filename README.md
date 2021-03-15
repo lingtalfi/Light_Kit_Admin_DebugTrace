@@ -1,6 +1,6 @@
 Light_Kit_Admin_DebugTrace
 ===========
-2019-11-07 -> 2021-03-09
+2019-11-07 -> 2021-03-15
 
 
 
@@ -77,42 +77,42 @@ $events.methods_collection:
     -
         method: registerListener
         args:
-            event: Light.on_route_found
+            event: Ling.Light.on_route_found
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: onRouteFound
     -
         method: registerListener
         args:
-            event: Light_Kit_Admin.on_page_rendered_before
+            event: Ling.Light_Kit_Admin.on_page_rendered_before
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: onPageRenderedBefore
     -
         method: registerListener
         args:
-            event: Light_Kit.on_page_conf_ready
+            event: Ling.Light_Kit.on_page_conf_ready
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: onKitPageConfReady
     -
         method: registerListener
         args:
-            event: Light_CsrfSimple.on_csrf_token_regenerated
+            event: Ling.Light_CsrfSimple.on_csrf_token_regenerated
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: onCsrfTokenRegenerated
     -
         method: registerListener
         args:
-            event: Light.initialize_1
+            event: Ling.Light.initialize_1
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: initialize
     -
         method: registerListener
         args:
-            event: Light.end_routine
+            event: Ling.Light.end_routine
             listener:
                 instance: @service(kit_admin_debugtrace)
                 callable_method: onEndRoutine
@@ -125,6 +125,10 @@ $events.methods_collection:
 
 History Log
 =============
+
+- 1.6.9 -- 2021-03-15
+
+    - update planet to adapt Ling.Light:0.70.0
 
 - 1.6.8 -- 2021-03-09
 

@@ -7,7 +7,7 @@ LightKitAdminDebugTraceService::onEndRoutine
 
 
 
-LightKitAdminDebugTraceService::onEndRoutine — Callable for [the Light.end_routine event](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md).
+LightKitAdminDebugTraceService::onEndRoutine — Callable for [the Ling.Light.end_routine event](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md).
 
 
 
@@ -21,7 +21,7 @@ public [LightKitAdminDebugTraceService::onEndRoutine](https://github.com/lingtal
 
 
 
-Callable for [the Light.end_routine event](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md).
+Callable for [the Ling.Light.end_routine event](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md).
 
 
 

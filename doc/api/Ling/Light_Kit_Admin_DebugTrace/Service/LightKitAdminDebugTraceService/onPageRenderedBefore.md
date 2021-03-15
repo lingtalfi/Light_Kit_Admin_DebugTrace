@@ -7,7 +7,7 @@ LightKitAdminDebugTraceService::onPageRenderedBefore
 
 
 
-LightKitAdminDebugTraceService::onPageRenderedBefore — Callable for the Light_Kit_Admin.on_page_rendered_before event provided by [the Light_Kit_Admin plugin](https://github.com/lingtalfi/Light_Kit_Admin).
+LightKitAdminDebugTraceService::onPageRenderedBefore — Callable for the Ling.Light_Kit_Admin.on_page_rendered_before event provided by [the Light_Kit_Admin plugin](https://github.com/lingtalfi/Light_Kit_Admin).
 
 
 
@@ -21,7 +21,7 @@ public [LightKitAdminDebugTraceService::onPageRenderedBefore](https://github.com
 
 
 
-Callable for the Light_Kit_Admin.on_page_rendered_before event provided by [the Light_Kit_Admin plugin](https://github.com/lingtalfi/Light_Kit_Admin).
+Callable for the Ling.Light_Kit_Admin.on_page_rendered_before event provided by [the Light_Kit_Admin plugin](https://github.com/lingtalfi/Light_Kit_Admin).
 
 
 

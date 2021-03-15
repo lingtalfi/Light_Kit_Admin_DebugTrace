@@ -121,7 +121,7 @@ route:
     is_secure_protocol: null
     is_ajax: false
 
-kit_admin_page: Light_Kit_Admin/kit/zeroadmin/zeroadmin_home
+kit_admin_page: Light_Kit_Admin/Ling.Light_Kit/zeroadmin/zeroadmin_home
 
 kit_admin_conf: 
     layout: templates/Ling.Light_Kit_Admin/layouts/zeroadmin/zeroadmin_main_layout.php
@@ -183,10 +183,10 @@ kit_admin_conf:
         
     
 events: 
-    - Light.initialize_1
+    - Ling.Light.initialize_1
     - Light.initialize_2
-    - Light.on_route_found
-    - Light.end_routine
+    - Ling.Light.on_route_found
+    - Ling.Light.end_routine
 
 session: 
     light_csrf_session: 4d05d942124feb8d96f7e2c20e5b97bf
