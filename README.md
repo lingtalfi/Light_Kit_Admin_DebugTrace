@@ -1,6 +1,6 @@
 Light_Kit_Admin_DebugTrace
 ===========
-2019-11-07 -> 2021-03-15
+2019-11-07 -> 2021-03-19
 
 
 
@@ -68,6 +68,7 @@ kit_admin_debugtrace:
                     - /user-data
                     - /ajax-handler
                     - /css/tmp/
+                    - /browser-sync/
 
 
 # --------------------------------------
@@ -98,13 +99,6 @@ $events.methods_collection:
     -
         method: registerListener
         args:
-            event: Ling.Light_CsrfSimple.on_csrf_token_regenerated
-            listener:
-                instance: @service(kit_admin_debugtrace)
-                callable_method: onCsrfTokenRegenerated
-    -
-        method: registerListener
-        args:
             event: Ling.Light.initialize_1
             listener:
                 instance: @service(kit_admin_debugtrace)
@@ -126,6 +120,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.10 -- 2021-03-19
+
+    - switch some listeners to Ling.Light_Events' open registration system
+  
 - 1.6.9 -- 2021-03-15
 
     - update planet to adapt Ling.Light:0.70.0
