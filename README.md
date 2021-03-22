@@ -1,6 +1,6 @@
 Light_Kit_Admin_DebugTrace
 ===========
-2019-11-07 -> 2021-03-19
+2019-11-07 -> 2021-03-22
 
 
 
@@ -120,6 +120,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.11 -- 2021-03-22
+
+    - adapt api to work with Ling.Light_Events:1.10.0
+  
 - 1.6.10 -- 2021-03-19
 
     - switch some listeners to Ling.Light_Events' open registration system

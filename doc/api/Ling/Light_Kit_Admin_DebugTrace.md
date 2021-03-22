@@ -1,6 +1,6 @@
 Ling/Light_Kit_Admin_DebugTrace
 ================
-2019-11-07 --> 2021-03-19
+2019-11-07 --> 2021-03-22
 
 
 
@@ -8,6 +8,10 @@ Ling/Light_Kit_Admin_DebugTrace
 Table of contents
 ===========
 
+- [LightKitAdminDebugTracePlanetInstaller](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Light_PlanetInstaller/LightKitAdminDebugTracePlanetInstaller.md) &ndash; The LightKitAdminDebugTracePlanetInstaller class.
+    - [LightKitAdminDebugTracePlanetInstaller::onMapCopyAfter](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Light_PlanetInstaller/LightKitAdminDebugTracePlanetInstaller/onMapCopyAfter.md) &ndash; This hook is executed during an [install](https://github.com/lingtalfi/TheBar/blob/master/discussions/import-install.md#summary).
+    - LightBasePlanetInstaller::__construct &ndash; Builds the LightBasePlanetInstaller instance.
+    - LightBasePlanetInstaller::setContainer &ndash; Sets the light service container interface.
 - [LightKitAdminDebugTraceService](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService.md) &ndash; The LightKitAdminDebugTraceService class.
     - [LightKitAdminDebugTraceService::__construct](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/__construct.md) &ndash; Builds the LightKitAdminDebugTraceService instance.
     - [LightKitAdminDebugTraceService::initialize](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService/initialize.md) &ndash; Listener for the [Ling.Light.initialize_1 event](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md).
@@ -26,9 +30,11 @@ Dependencies
 ============
 - [BabyYaml](https://github.com/lingtalfi/BabyYaml)
 - [Bat](https://github.com/lingtalfi/Bat)
+- [CliTools](https://github.com/lingtalfi/CliTools)
 - [Light](https://github.com/lingtalfi/Light)
 - [Light_CsrfSession](https://github.com/lingtalfi/Light_CsrfSession)
 - [Light_CsrfSimple](https://github.com/lingtalfi/Light_CsrfSimple)
 - [Light_Events](https://github.com/lingtalfi/Light_Events)
+- [Light_PlanetInstaller](https://github.com/lingtalfi/Light_PlanetInstaller)
 
 

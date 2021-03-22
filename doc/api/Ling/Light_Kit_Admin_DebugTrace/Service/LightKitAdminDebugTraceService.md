@@ -4,7 +4,7 @@
 
 The LightKitAdminDebugTraceService class
 ================
-2019-11-07 --> 2021-03-19
+2019-11-07 --> 2021-03-22
 
 
 
@@ -127,3 +127,6 @@ See the source code of [Ling\Light_Kit_Admin_DebugTrace\Service\LightKitAdminDeb
 
 
 
+SeeAlso
+==============
+Previous class: [LightKitAdminDebugTracePlanetInstaller](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Light_PlanetInstaller/LightKitAdminDebugTracePlanetInstaller.md)<br>
