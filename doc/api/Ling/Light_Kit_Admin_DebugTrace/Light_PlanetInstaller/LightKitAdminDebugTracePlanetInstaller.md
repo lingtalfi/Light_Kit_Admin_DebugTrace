@@ -61,4 +61,4 @@ See the source code of [Ling\Light_Kit_Admin_DebugTrace\Light_PlanetInstaller\Li
 
 SeeAlso
 ==============
-Next class: [LightKitAdminDebugTraceService](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService.md)<br>
+Previous class: [LightKitAdminDebugTraceException](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Exception/LightKitAdminDebugTraceException.md)<br>Next class: [LightKitAdminDebugTraceService](https://github.com/lingtalfi/Light_Kit_Admin_DebugTrace/blob/master/doc/api/Ling/Light_Kit_Admin_DebugTrace/Service/LightKitAdminDebugTraceService.md)<br>

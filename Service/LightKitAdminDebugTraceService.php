@@ -4,6 +4,7 @@
 namespace Ling\Light_Kit_Admin_DebugTrace\Service;
 
 
+use Exception;
 use Ling\BabyYaml\BabyYamlUtil;
 use Ling\Bat\ArrayTool;
 use Ling\Bat\FileSystemTool;
@@ -14,6 +15,7 @@ use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_CsrfSession\Service\LightCsrfSessionService;
 use Ling\Light_CsrfSimple\Service\LightCsrfSimpleService;
 use Ling\Light_Events\Service\LightEventsService;
+use Ling\Light_Kit_Admin_DebugTrace\Exception\LightKitAdminDebugTraceException;
 
 /**
  * The LightKitAdminDebugTraceService class.
@@ -245,6 +247,39 @@ class LightKitAdminDebugTraceService
         }
     }
 
+
+
+    /**
+     * Returns the file path, in the target dir, corresponding to the given uri.
+     *
+     * If the target dir is not defined, an exception is thrown.
+     *
+     * @param string $uri
+     * @return string
+     * @throws LightKitAdminDebugTraceException
+     */
+    public function getTargetDirFilePathByUri(string $uri): string
+    {
+        if (null !== $this->targetDir) {
+
+
+            $this->targetDirCurrentFileName =
+                str_replace([
+                    '/',
+                ], [
+                    '_slash_',
+                ], $uri)
+                . ".txt";
+
+            if (strlen($this->targetDirCurrentFileName) > 255) {
+                $this->targetDirCurrentFileName = substr($this->targetDirCurrentFileName, 0, 255);
+            }
+            return $this->targetDir . "/" . $this->targetDirCurrentFileName;
+        } else {
+            throw new LightKitAdminDebugTraceException("The targetDir property was not defined in the service config.");
+        }
+    }
+
     //--------------------------------------------
     //
     //--------------------------------------------
@@ -337,22 +372,12 @@ class LightKitAdminDebugTraceService
         }
 
         if (null !== $this->targetDir) {
-
-
-            $this->targetDirCurrentFileName =
-                str_replace([
-                    '/',
-                ], [
-                    '_slash_',
-                ], $request->getUri())
-                . ".txt";
-
-            if (strlen($this->targetDirCurrentFileName) > 255) {
-                $this->targetDirCurrentFileName = substr($this->targetDirCurrentFileName, 0, 255);
-            }
-            FileSystemTool::mkfile($this->targetDir . "/" . $this->targetDirCurrentFileName, "");
+            $file = $this->getTargetDirFilePathByUri($request->getUri());
+            FileSystemTool::mkfile($file, "");
         }
     }
+
+
 
 
     /**

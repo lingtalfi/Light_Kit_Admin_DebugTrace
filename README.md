@@ -120,6 +120,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.13 -- 2021-05-02
+
+    - add service->getTargetDirFilePathByUri method
+  
 - 1.6.12 -- 2021-05-02
 
     - fix service->resetFile method not resetting files in the target directory
