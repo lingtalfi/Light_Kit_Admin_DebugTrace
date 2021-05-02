@@ -120,6 +120,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.14 -- 2021-05-02
+
+    - fix service->onKitPageConfReady returning erroneous widgetFile property (missing templates part)
+  
 - 1.6.13 -- 2021-05-02
 
     - add service->getTargetDirFilePathByUri method

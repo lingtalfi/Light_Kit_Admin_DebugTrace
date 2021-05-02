@@ -202,7 +202,7 @@ class LightKitAdminDebugTraceService
                     $myZones[$name][] = [
                         "name" => $widget['name'],
                         "className" => $widget['className'] . " (" . $widget['type'] . ")",
-                        "widgetFile" => $widget['widgetDir'] . "/" . $widget['template'],
+                        "widgetFile" => $widget['widgetDir'] . "/templates/" . $widget['template'],
                     ];
                 }
             }
