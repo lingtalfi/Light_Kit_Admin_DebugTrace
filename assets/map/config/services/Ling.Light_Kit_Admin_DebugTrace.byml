@@ -12,6 +12,7 @@ kit_admin_debugtrace:
                 urlIgnoreIfStartWith: []
                     - /user-data
                     - /ajax-handler
+                    - /plugins/
                     - /css/tmp/
                     - /browser-sync/
 

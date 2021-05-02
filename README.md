@@ -1,6 +1,6 @@
 Light_Kit_Admin_DebugTrace
 ===========
-2019-11-07 -> 2021-03-22
+2019-11-07 -> 2021-05-02
 
 
 
@@ -120,6 +120,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.12 -- 2021-05-02
+
+    - fix service->resetFile method not resetting files in the target directory
+  
 - 1.6.11 -- 2021-03-22
 
     - adapt api to work with Ling.Light_Events:1.10.0

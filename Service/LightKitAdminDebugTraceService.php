@@ -350,6 +350,7 @@ class LightKitAdminDebugTraceService
             if (strlen($this->targetDirCurrentFileName) > 255) {
                 $this->targetDirCurrentFileName = substr($this->targetDirCurrentFileName, 0, 255);
             }
+            FileSystemTool::mkfile($this->targetDir . "/" . $this->targetDirCurrentFileName, "");
         }
     }
 
