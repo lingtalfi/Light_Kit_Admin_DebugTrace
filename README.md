@@ -120,6 +120,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.15 -- 2021-05-03
+
+    - Update dependencies to Ling.Light_Events (pushed by SubscribersUtil)
+
 - 1.6.14 -- 2021-05-02
 
     - fix service->onKitPageConfReady returning erroneous widgetFile property (missing templates part)
