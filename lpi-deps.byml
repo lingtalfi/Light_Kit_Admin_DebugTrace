@@ -191,3 +191,13 @@
     - Ling:Light_CsrfSimple:1.2.7+
     - Ling:Light_Events:1.10.4+
     - Ling:Light_PlanetInstaller:1.0.27+
+
+1.6.16: 
+    - Ling:BabyYaml:1.7.8+
+    - Ling:Bat:1.312+
+    - Ling:CliTools:1.10.26+
+    - Ling:Light:0.70.4+
+    - Ling:Light_CsrfSession:1.0.5+
+    - Ling:Light_CsrfSimple:1.2.8+
+    - Ling:Light_Events:1.10.4+
+    - Ling:Light_PlanetInstaller:1.0.28+
