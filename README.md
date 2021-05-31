@@ -1,6 +1,6 @@
 Light_Kit_Admin_DebugTrace
 ===========
-2019-11-07 -> 2021-05-02
+2019-11-07 -> 2021-05-31
 
 
 
@@ -120,6 +120,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.17 -- 2021-05-31
+
+    - update api to work with Light_PlanetInstaller 2.0.0
+  
 - 1.6.16 -- 2021-05-03
 
     - Update dependencies to Ling.Light_Events (pushed by SubscribersUtil)
