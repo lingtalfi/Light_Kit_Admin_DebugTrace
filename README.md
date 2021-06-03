@@ -1,6 +1,6 @@
 Light_Kit_Admin_DebugTrace
 ===========
-2019-11-07 -> 2021-05-31
+2019-11-07 -> 2021-06-03
 
 
 
@@ -120,6 +120,10 @@ $events.methods_collection:
 History Log
 =============
 
+- 1.6.19 -- 2021-06-03
+
+    - adapt api to work with Light_PlanetInstaller:2.0.4
+  
 - 1.6.18 -- 2021-05-31
 
     - Removing trailing plus in lpi-deps file (to work with Light_PlanetInstaller:2.0.0 api
