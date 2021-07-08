@@ -231,3 +231,10 @@
     - Ling:Light_CsrfSimple:1.2.10
     - Ling:Light_Events:1.10.6
     - Ling:Light_PlanetInstaller:2.0.4
+
+1.6.20: 
+    - Ling:CliTools:1.10.29
+    - Ling:Light:0.70.12
+    - Ling:Light_Events:1.10.8
+    - Ling:Light_Kit_DebugTrace:1.0.0
+    - Ling:Light_PlanetInstaller:2.0.8
